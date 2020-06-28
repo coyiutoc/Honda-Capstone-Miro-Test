@@ -12,6 +12,8 @@ async function getWidget() {
   // Get selected widgets
   let widgets = await miro.board.selection.get()
 
+  if (widgets.length === 0) {return}
+  
   // Get first widget from selected widgets
   let text = widgets[0].text
 
